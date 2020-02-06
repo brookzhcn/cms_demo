@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load static %}
+
+{% block body_class %}template-organization-index-page{% endblock %}
+
+{% block extra_css %}
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div id="app">
+    <div id="content1">
+        {{ page.content1|richtext }}
+    </div>
+    <div id="content2">
+        {% for block in page.content2 %}
+            {% include_block block %}
+        {% endfor %}
+    </div>
+</div>
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+
+{% endblock content %}
