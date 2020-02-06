@@ -182,13 +182,27 @@ CODEMIRROR_SETTINGS = codemirror_settings_update(CODEMIRROR_SETTINGS, {
     'django': {
         'mode': 'django',
         'modes': ['xml', 'javascript', 'css', 'vbscript', 'htmlmixed',
-                  'django'],
+                  'django', 'vue'],
         'addons': [
             "CodeMirror/addon/mode/overlay.js",
             "CodeMirror/addon/edit/matchbrackets.js",
+            "CodeMirror/addon/hint/show-hint.js",
         ],
         'themes': ['dracula']
     },
 
 })
+
+CODEMIRROR_MODES = {
+    "css": "CodeMirror/mode/css/css.js",
+    "django": "CodeMirror/mode/django/django.js",
+    "htmlmixed": "CodeMirror/mode/htmlmixed/htmlmixed.js",
+    "javascript": "CodeMirror/mode/javascript/javascript.js",
+    "python": "CodeMirror/mode/python/python.js",
+    "rst": "CodeMirror/mode/rst/rst.js",
+    "stex": "CodeMirror/mode/stex/stex.js",
+    "vbscript": "CodeMirror/mode/vbscript/vbscript.js",
+    "xml": "CodeMirror/mode/xml/xml.js",
+    "vue": "CodeMirror/mode/vue/vue.js",
+}
 
