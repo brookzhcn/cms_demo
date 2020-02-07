@@ -42,10 +42,11 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
-
+    'wagtail.api.v2',
+    'rest_framework',
     'modelcluster',
     'taggit',
-
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -164,7 +166,7 @@ WAGTAIL_SITE_NAME = "mysite"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://127.0.0.1:8006'
 
 CODEMIRROR_THEMES = {
     "dracula": "CodeMirror/theme/dracula.css",
@@ -206,3 +208,7 @@ CODEMIRROR_MODES = {
     "vue": "CodeMirror/mode/vue/vue.js",
 }
 
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:8080",
+    "http://127.0.0.1:8080"
+]

@@ -1,6 +1,7 @@
 from django.db import models
 from django import forms
 from django.utils.safestring import mark_safe
+from wagtail.api import APIField
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField, StreamField
 from wagtail.core import blocks
@@ -42,4 +43,8 @@ class OrganizationIndexPage(Page):
         FieldPanel('code'),
         FieldPanel('content1'),
         StreamFieldPanel('content2'),
+    ]
+    api_fields = [
+        APIField('code'),
+        APIField('content1'),
     ]
