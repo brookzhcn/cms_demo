@@ -9,5 +9,5 @@
 cd mysite
 pip install -r requirements.txt
 ```
-
+后台帐户：admin/fighting
 
