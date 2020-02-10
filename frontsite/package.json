@@ -5,14 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build_hello_world": "vue-cli-service build --target wc --name hello-world src\\components\\HelloWorld.vue",
-    "build_page_list": "vue-cli-service build --target wc --name page-list src\\components\\PageList.vue",
+    "build_components": "vue-cli-service build --target wc --name my src\\components\\*.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.4.4",
     "vue": "^2.6.10",
+    "vue-json-excel": "^0.2.98",
+    "vue-json-tree-view": "^2.1.4",
     "vue-json-viewer": "^2.2.8"
   },
   "devDependencies": {
@@ -22,7 +23,8 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vue2-ace-editor": "0.0.15"
   },
   "eslintConfig": {
     "root": true,
